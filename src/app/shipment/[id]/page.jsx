@@ -1,11 +1,9 @@
-
 'use client'
 
 import { useParams, useRouter } from 'next/navigation'
-import shipments from '../../data/shipments.json'
-import SimulatedStatusUpdate from '@/app/components/SimulatedStatusUpdate'
+import shipments from '@/data/shipments.json'
+import SimulatedStatusUpdate from '@/components/SimulatedStatusUpdate'
 import { useState } from 'react'
-
 
 export default function ShipmentDetail() {
   const router = useRouter()
@@ -20,18 +18,17 @@ export default function ShipmentDetail() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 sm:px-12 py-6 w-full ">
       <div className="w-full bg-white shadow-md rounded-xl p-6">
-        
-          <div className="flex gap-2">
-            <button
-              onClick={() => router.back()}
-              className="px-3 py-1 text-sm bg-blue-700 text-white rounded hover:bg-blue-800 transition">
-              ← Back
-            </button>
-          </div>
-          <h1 className="text-2xl font-bold text-blue-900 mb-4 text-center">
-            Shipment Details - {shipment.id}
-          </h1>
-        
+        <div className="flex gap-2">
+          <button
+            onClick={() => router.back()}
+            className="px-3 py-1 text-sm bg-blue-700 text-white rounded hover:bg-blue-800 transition">
+            ← Back
+          </button>
+        </div>
+        <h1 className="text-2xl font-bold text-blue-900 mb-4 text-center">
+          Shipment Details - {shipment.id}
+        </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-m mb-6 pl-20 ">
           <p>
             <strong>Sender:</strong> {shipment.sender}

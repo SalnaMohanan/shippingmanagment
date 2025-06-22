@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import shipments from './data/shipments.json'
-import ShipmentCard from './components/ShipmentCard'
+ import shipments from '@/data/shipments.json'
+import ShipmentCard from '@/components/ShipmentCard'
 
 export default function Home() {
   const [search, setSearch] = useState('')

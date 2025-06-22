@@ -1,6 +1,6 @@
 // src/app/layout.js
 
-import './style/globals.css'
+import '../style/globals.css'
 
 
 export const metadata = {

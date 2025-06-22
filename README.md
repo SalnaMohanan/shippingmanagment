@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Shipping Management App
 
-## Getting Started
+A modern, responsive web application built with **Next.js** and **Tailwind CSS** for managing shipment tracking and details.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- View all shipments in a card-style layout
+- Filter shipments by **ID**, **Receiver Name**, and **Status**
+- View detailed shipment tracking history
+- Simulate status updates (e.g., Delivered, Delayed)
+- Fully responsive and clean UI
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Setup Instructions
 
-## Learn More
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/SalnaMohanan/shippingmanagment.git
+   cd shippingmanagment
 
-To learn more about Next.js, take a look at the following resources:
+## Install dependencies:
+   npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Run the development server:
+   npm run dev   
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Open your browser and go to:
+http://localhost:3000
 
-## Deploy on Vercel
+## Framework & Styling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js App Router was used for its file-based routing, performance, and developer experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Tailwind CSS was chosen for fast and customizable UI development with utility-first classes.
+
+## Component Structure
+
+- UI elements like ShipmentCard, SearchFilter, and SimulatedStatusUpdate are broken into reusable components to promote maintainability and scalability.
+
+- Filtering logic is handled at the top level (Home page) to maintain centralized state and reduce prop-drilling.
+
+## Data Handling
+
+- Static shipment data is loaded from shipments.json for simplicity and testing.
+
+- Status simulation is done in local state only (no backend), to demonstrate interactivity and feedback using React's useState.
+
+## UX/UI
+- Responsive card layout for shipment listing
+- Tracking timeline with location, date, and status
+- Visual indicators (color-coded tags, toast messages) to enhance usability
+
+## Folder Structure
+ 
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── page.jsx
+│   │   └── shipment/
+│   │       └── [id]/
+│   │           └── page.jsx
+│   ├── components/
+│   │   ├── ShipmentCard.jsx
+│   │   ├── SearchFilter.jsx
+│   │   └── SimulatedStatusUpdate.jsx
+│   ├── data/
+│   │   └── shipments.json
+│   └── styles/
+│       └── globals.css
+├── README.md
+├── package.json
+└── tailwind.config.js
