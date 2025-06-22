@@ -1,0 +1,112 @@
+[
+  {
+    "id": "SHIP12345",
+    "sender": "Alice",
+    "receiver": "Bob",
+    "origin": "New York",
+    "destination": "Los Angeles",
+    "date": "2025-06-20",
+    "status": "In Transit",
+    "tracking": [
+      { "date": "2025-06-20", "location": "New York", "status": "Dispatched" },
+      { "date": "2025-06-21", "location": "Chicago", "status": "In Transit" },
+      {
+        "date": "2025-06-22",
+        "location": "Los Angeles",
+        "status": "Out for Delivery"
+      }
+    ]
+  },
+  {
+    "id": "SHIP67890",
+    "sender": "Carol",
+    "receiver": "Dave",
+    "origin": "Chicago",
+    "destination": "Miami",
+    "date": "2025-06-18",
+    "status": "Delivered",
+    "tracking": [
+      { "date": "2025-06-18", "location": "Chicago", "status": "Dispatched" },
+      { "date": "2025-06-19", "location": "Orlando", "status": "In Transit" },
+      { "date": "2025-06-20", "location": "Miami", "status": "Delivered" }
+    ]
+  },
+  {
+    "id": "SHIP11223",
+    "sender": "Eva",
+    "receiver": "Frank",
+    "origin": "Houston",
+    "destination": "Seattle",
+    "date": "2025-06-17",
+    "status": "Delayed",
+    "tracking": [
+      { "date": "2025-06-17", "location": "Houston", "status": "Dispatched" },
+      {
+        "date": "2025-06-18",
+        "location": "Denver",
+        "status": "Delayed due to weather"
+      }
+    ]
+  },
+  {
+    "id": "SHIP33445",
+    "sender": "Grace",
+    "receiver": "Hank",
+    "origin": "Boston",
+    "destination": "Denver",
+    "date": "2025-06-15",
+    "status": "In Transit",
+    "tracking": [
+      { "date": "2025-06-15", "location": "Boston", "status": "Dispatched" },
+      { "date": "2025-06-16", "location": "Columbus", "status": "In Transit" }
+    ]
+  },
+  {
+    "id": "SHIP55667",
+    "sender": "Ivy",
+    "receiver": "Jake",
+    "origin": "San Diego",
+    "destination": "Phoenix",
+    "date": "2025-06-14",
+    "status": "Delivered",
+    "tracking": [
+      { "date": "2025-06-14", "location": "San Diego", "status": "Dispatched" },
+      { "date": "2025-06-15", "location": "Phoenix", "status": "Delivered" }
+    ]
+  },
+  {
+    "id": "SHIP77889",
+    "sender": "Karen",
+    "receiver": "Leo",
+    "origin": "Dallas",
+    "destination": "Atlanta",
+    "date": "2025-06-13",
+    "status": "Delayed",
+    "tracking": [
+      { "date": "2025-06-13", "location": "Dallas", "status": "Dispatched" },
+      {
+        "date": "2025-06-14",
+        "location": "Birmingham",
+        "status": "Delayed: Technical Issue"
+      }
+    ]
+  },
+  {
+    "id": "SHIP99001",
+    "sender": "Mona",
+    "receiver": "Nate",
+    "origin": "Philadelphia",
+    "destination": "San Francisco",
+    "date": "2025-06-12",
+    "status": "In Transit",
+    "tracking": [
+      {
+        "date": "2025-06-12",
+        "location": "Philadelphia",
+        "status": "Dispatched"
+      },
+      { "date": "2025-06-13", "location": "Chicago", "status": "In Transit" },
+      { "date": "2025-06-14", "location": "Denver", "status": "In Transit" }
+    ]
+  }
+]
