@@ -19,7 +19,7 @@ export default function ShipmentDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#eef5b0] px-4 sm:px-12 py-6 w-full">
+    <div className="min-h-screen bg-[#e0f7fa] px-4 sm:px-12 py-6 w-full">
       <div className="w-full bg-white shadow-md rounded-xl p-6">
         {/* Back Button */}
         <div className="flex gap-2">

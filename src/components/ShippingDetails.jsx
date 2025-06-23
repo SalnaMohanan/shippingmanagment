@@ -4,7 +4,7 @@ export default function ShipmentDetails({ shipment }) {
 
   return (
     <>
-      <h2 className="text-2xl font-semibold text-blue-800 mb-4 mt-6 text-center">
+      <h2 className="text-2xl font-semibold text-black-800 mb-4 mt-6 text-center">
         <strong> Shipment Details</strong>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-m mb-8 mt-5 pl-20">
