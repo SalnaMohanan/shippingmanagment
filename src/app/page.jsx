@@ -1,15 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react'
- import shipments from '@/data/shipments.json'
+import shipments from '@/data/shipments.json'
 import ShipmentCard from '@/components/ShipmentCard'
+import SearchFilter from '@/components/SearchFilter'
 
 export default function Home() {
-  const [search, setSearch] = useState('')
-  const [status, setStatus] = useState('')
+  const [filters, setFilters] = useState({
+    search: '',
+    status: '',
+    date: '', // single date input
+  })
+
   const [filteredData, setFilteredData] = useState([])
 
   useEffect(() => {
+    const { search, status, date } = filters
+
     const result = shipments.filter((ship) => {
       const matchSearch =
         ship.id.toLowerCase().includes(search.toLowerCase()) ||
@@ -17,11 +24,13 @@ export default function Home() {
 
       const matchStatus = status === '' || ship.status === status
 
-      return matchSearch && matchStatus
+      const matchDate = !date || new Date(ship.date) <= new Date(date) 
+
+      return matchSearch && matchStatus && matchDate
     })
 
     setFilteredData(result)
-  }, [search, status]) // re-filter on any change
+  }, [filters])
 
   return (
     <div>
@@ -29,22 +38,8 @@ export default function Home() {
         Shipping Management
       </h1>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6 mb-4 px-4">
-        <input
-          type="text"
-          placeholder="Search by ID or Receiver"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="p-2 border rounded w-full sm:w-1/3"
-        />
-
-        <select
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-          className="p-2 border rounded w-full sm:w-1/4">
-          <option value="">All Status</option>
-          <option value="Delivered">Delivered</option>
-        </select>
+      <div className="mt-6 mb-4 px-4">
+        <SearchFilter onFilter={setFilters} />
       </div>
 
       <div className="flex gap-4 flex-wrap mt-6 ml-12 mr-12">

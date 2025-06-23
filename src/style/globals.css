@@ -3,12 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 body {
-  @apply min-h-screen bg-gradient-to-br from-white via-blue-100 to-blue-300;
+  @apply min-h-screen bg-[#ede7e7];
 }
-
-
-
-/* body {
-  @apply min-h-screen bg-[#DDEB9D];
-} */

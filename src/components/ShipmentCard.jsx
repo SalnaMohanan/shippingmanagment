@@ -14,7 +14,10 @@ export default function ShipmentCard({ shipments }) {
           <div key={ship.id} className="bg-white rounded-xl shadow-md p-5">
             <div className="flex justify-between items-center mb-2">
               <h2 className="text-lg font-semibold">ID: {ship.id}</h2>
-              <span className={`text-xs px-3 py-1 rounded-full ${statusColor[ship.status]}`}>
+              <span
+                className={`text-xs px-3 py-1 rounded-full ${
+                  statusColor[ship.status]
+                }`}>
                 {ship.status}
               </span>
             </div>
@@ -38,7 +41,7 @@ export default function ShipmentCard({ shipments }) {
               <strong>Date:</strong> {ship.date}
             </p>
             <Link href={`/shipment/${ship.id}`}>
-              <button className="w-full bg-[#143D60] text-white rounded-lg py-2 text-sm font-semibold hover:bg-[#0e2e4a] transition mt-3">
+              <button className="w-full bg-[#1c321c] text-white rounded-lg py-2 text-sm font-semibold hover:bg-[#4b534b] transition mt-3">
                 View Details & Tracking
               </button>
             </Link>

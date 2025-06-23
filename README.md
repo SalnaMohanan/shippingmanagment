@@ -21,6 +21,16 @@ A modern, responsive web application built with **Next.js** and **Tailwind CSS**
    git clone https://github.com/SalnaMohanan/shippingmanagment.git
    cd shippingmanagment
 
+## Project Setup
+- File & Folder Structure Created by npx create-next-app@latest
+
+With the following selected:
+- TypeScript: No
+- ESLint: No
+- Tailwind CSS: Yes
+- Use src/ directory: Yes
+- Use App Router: Yes
+
 ## Install dependencies:
    npm install
 
@@ -63,9 +73,11 @@ http://localhost:3000
 │   │       └── [id]/
 │   │           └── page.jsx
 │   ├── components/
-│   │   ├── ShipmentCard.jsx
+│   │   ├── HistoryTracking.jsx
 │   │   ├── SearchFilter.jsx
-│   │   └── SimulatedStatusUpdate.jsx
+│   │   └── ShipmentCard.jsx
+|   |   |__ ShippingDetails.jsx
+|   |   |__ SimulatedStatusUpdate.jsx
 │   ├── data/
 │   │   └── shipments.json
 │   └── styles/
@@ -73,3 +85,4 @@ http://localhost:3000
 ├── README.md
 ├── package.json
 └── tailwind.config.js
+  

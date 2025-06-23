@@ -20,12 +20,12 @@ export default function SimulatedStatusUpdate({ shipment, onStatusChange }) {
         </p>
         <button
           onClick={() => simulateStatusUpdate('Delivered')}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+          className="bg-green-300 text-black px-4 py-2 rounded hover:bg-green-700">
           Mark as Delivered
         </button>
         <button
           onClick={() => simulateStatusUpdate('Delayed')}
-          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+          className="bg-red-300 text-black px-4 py-2 rounded hover:bg-red-600">
           Simulate Delay
         </button>
       </div>
