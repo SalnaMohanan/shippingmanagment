@@ -1,4 +1,3 @@
-// src/components/ShipmentDetails.jsx
 
 export default function ShipmentDetails({ shipment }) {
   if (!shipment) return null
