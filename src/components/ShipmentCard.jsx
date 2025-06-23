@@ -41,7 +41,7 @@ export default function ShipmentCard({ shipments }) {
               <strong>Date:</strong> {ship.date}
             </p>
             <Link href={`/shipment/${ship.id}`}>
-              <button className="w-full bg-[#1c321c] text-white rounded-lg py-2 text-sm font-semibold hover:bg-[#4b534b] transition mt-3">
+              <button className="w-full bg-black text-white rounded-lg py-2 text-sm font-semibold hover:bg-[#4b534b] transition mt-3 text-white">
                 View Details & Tracking
               </button>
             </Link>

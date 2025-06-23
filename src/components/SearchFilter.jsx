@@ -26,7 +26,7 @@ export default function SearchFilter({ onFilter }) {
       <select
         value={status}
         onChange={(e) => setStatus(e.target.value)}
-        className="border p-2 rounded w-full sm:w-1/4 bg-transparent">
+        className="border p-2 rounded w-full sm:w-1/3 bg-transparent">
         <option value="">All Status</option>
         <option value="In Transit">In Transit</option>
         <option value="Delayed">Delayed</option>
